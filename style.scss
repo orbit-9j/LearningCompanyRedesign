@@ -1,0 +1,524 @@
+$blue: #44bbc4;
+$paleblue: rgba(68, 187, 196, 0.07);
+$pink: #b64f88;
+$palepink: rgba(182, 79, 136, 0.07);
+$yellow: #f7a741;
+$paleyellow: rgba(247, 167, 65, 0.1);
+$grey: #f5f5f5;
+$bodytext: rgb(42, 42, 42);
+
+$border: 0.125rem;
+$bby: 0.3125rem;
+$xsmall: 0.625rem;
+$small: 0.9375rem;
+$medium: 1.875rem;
+$large: 3.125rem;
+$larger: 4.6875rem;
+$xlarge: 6.25rem;
+$radius: 1.5625rem;
+$nav-height: 6.25rem;
+
+@mixin scrollbar {
+  //chrome, safari, edge
+  &::-webkit-scrollbar {
+    width: 0.75rem; /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $grey; /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue; /* color of the scroll thumb */
+    border-radius: 1.25rem; /* roundness of the scroll thumb */
+    border: $border solid $grey; /* creates padding around scroll thumb */
+  }
+
+  //firefox
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: $blue $grey; /* scroll thumb and track */
+}
+
+* {
+  font-family: "Inclusive Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body > * {
+  padding: 0 $xlarge;
+}
+
+body {
+  @include scrollbar;
+
+  color: $bodytext;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: $xsmall;
+  text-align: center;
+  padding: $medium;
+  color: white;
+}
+
+button {
+  padding: $small $radius;
+  border-radius: $radius;
+  border: 0;
+  background-color: $yellow;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($yellow, 15%);
+  }
+}
+
+h1 {
+  font-size: 350%;
+  margin: 0;
+}
+
+p {
+  line-height: 150%;
+}
+
+p,
+a,
+button {
+  font-size: 1rem;
+}
+
+section {
+  padding-top: $xlarge;
+  padding-bottom: $xlarge;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: $xlarge;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: $small;
+  font-size: 140%;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button {
+  letter-spacing: 0.0313rem;
+}
+
+.grid {
+  display: grid;
+  gap: $medium;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+#screenheight {
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  height: $nav-height;
+  justify-content: space-between;
+
+  .logo {
+    padding: $small 0;
+    transition: 200ms ease-in-out;
+
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-weight: bold;
+
+    display: flex;
+
+    & > * {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .logotext {
+      margin-right: $xsmall;
+      font-size: 300%;
+
+      .pink {
+        color: $pink;
+        margin-right: $bby;
+      }
+
+      .yellow {
+        color: $yellow;
+      }
+
+      .blue {
+        color: darken($blue, 4%);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+
+  .buttons {
+    justify-content: right;
+    overflow: hidden; //temporary fix to links and buttons jumping out of the nav when the screen is narrow
+
+    a {
+      display: inline-block;
+      margin-left: $medium;
+      text-decoration: none;
+      color: $bodytext;
+      line-height: $nav-height;
+    }
+
+    a:hover {
+      color: $yellow;
+    }
+
+    button {
+      margin-left: $medium;
+    }
+
+    #current {
+      color: $yellow;
+    }
+
+    .menubutton {
+      margin: 0;
+    }
+  }
+}
+
+#hero {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: grid;
+  gap: $xlarge;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - $nav-height - 2 * $larger);
+  justify-content: center;
+  align-items: center;
+  padding: $larger 0;
+
+  h1 {
+    text-align: left;
+    margin-bottom: $medium;
+  }
+
+  p {
+    margin: $small 0;
+  }
+
+  button {
+    margin-top: $medium;
+  }
+
+  .images {
+    position: relative;
+    height: 100%;
+
+    img {
+      position: absolute;
+      border-radius: $xsmall;
+    }
+
+    .first {
+      height: 18.75rem;
+      display: block;
+      top: 0;
+      left: 0;
+      box-shadow: (-$xsmall) (-$xsmall) 0 $blue;
+    }
+
+    .second {
+      width: 15.625rem;
+      display: block;
+      bottom: 0;
+      right: 0;
+      box-shadow: $xsmall $xsmall 0 $pink;
+    }
+  }
+}
+
+#why,
+#levels {
+  background-color: $grey;
+}
+
+#why {
+  .card {
+    border: $border solid $pink;
+    background-color: $palepink;
+    color: $bodytext;
+    box-shadow: $bby $bby 0 $pink;
+  }
+}
+
+#skills {
+  padding-right: 0;
+  padding-left: 0;
+
+  .grid {
+    display: flex;
+    //flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding-bottom: $medium;
+    padding-left: calc($xlarge + $bby);
+    @include scrollbar;
+
+    .card {
+      min-height: 18.75rem;
+      min-width: 25%;
+      border: $border solid $yellow;
+      background-color: $paleyellow;
+      color: $bodytext;
+      box-shadow: (-$bby) $bby 0 $yellow;
+    }
+  }
+}
+
+#levels {
+  .card {
+    border: $border solid $blue;
+    background-color: $paleblue;
+    color: $bodytext;
+    box-shadow: $bby $bby 0 $blue;
+  }
+}
+
+#contact {
+  form {
+    max-width: 50rem;
+    margin: auto;
+
+    #columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $medium;
+    }
+
+    .column {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $small;
+      padding: 0;
+    }
+
+    .formgroup {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: $medium;
+      align-items: center;
+
+      label {
+        text-align: right;
+      }
+
+      .required::after {
+        content: "*";
+        color: $pink;
+        margin-left: $border;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: $small;
+        border-radius: $small;
+        border: 0.0625rem solid grey;
+
+        &:hover {
+          border-color: $blue;
+          background-color: lighten($blue, 42%);
+        }
+
+        &:focus {
+          outline-color: $blue;
+          outline-width: $border;
+          background-color: lighten($blue, 42%);
+        }
+      }
+
+      select {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+      margin-top: $medium;
+      width: 12.5rem;
+    }
+  }
+}
+
+footer {
+  background-color: $grey;
+  padding: $large;
+
+  p,
+  a {
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: $bodytext;
+  }
+
+  #links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $small;
+  }
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.issues {
+  //lined paper effect
+  background-color: #fff3e6;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.1) 0.0625rem,
+      transparent 0.0625rem
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0.0625rem, transparent 0.0625rem);
+  background-size: 1.25rem 1.25rem; //adjust the size to control the spacing between lines
+
+  padding: 0 $xlarge $xlarge $xlarge;
+
+  //left paper margin
+  &::before {
+    content: "";
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: $xlarge;
+    border-left: $border solid #bc106e;
+  }
+
+  //right paper margin
+  &::after {
+    content: "";
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: $xlarge;
+    border-right: $border solid #bc106e;
+  }
+
+  p,
+  li,
+  a,
+  td,
+  th {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+  }
+
+  th {
+    background-color: rgba(128, 128, 128, 0.3);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.1);
+  }
+
+  td,
+  th {
+    padding: $small;
+  }
+
+  table,
+  td,
+  th {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  a {
+    color: black;
+    margin-top: $small;
+    display: inline-block;
+    background-color: rgba(125, 25, 255, 0.5);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Shadows Into Light", cursive;
+    letter-spacing: 0.1875rem;
+  }
+
+  h1 {
+    line-height: 110%;
+    margin: 0;
+    margin-top: $medium;
+    background-color: rgba(255, 140, 25, 0.5);
+  }
+
+  .margin {
+    margin-bottom: $medium;
+  }
+
+  h2 {
+    background-color: rgba(121, 255, 25, 0.5);
+    margin-top: $medium;
+    margin-bottom: $medium;
+  }
+
+  h3 {
+    margin-top: $medium;
+    margin-bottom: $medium;
+    background-color: rgba(125, 25, 255, 0.5);
+  }
+
+  ul > li,
+  p {
+    margin-bottom: $xsmall;
+  }
+
+  .webgrid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: $medium;
+
+    img {
+      width: 100%;
+    }
+  }
+}

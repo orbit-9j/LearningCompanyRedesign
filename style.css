@@ -1,0 +1,439 @@
+* {
+  font-family: "Inclusive Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body > * {
+  padding: 0 6.25rem;
+}
+
+body {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #44bbc4 #f5f5f5; /* scroll thumb and track */
+  color: rgb(42, 42, 42);
+}
+body::-webkit-scrollbar {
+  width: 0.75rem; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #f5f5f5; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #44bbc4; /* color of the scroll thumb */
+  border-radius: 1.25rem; /* roundness of the scroll thumb */
+  border: 0.125rem solid #f5f5f5; /* creates padding around scroll thumb */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0.625rem;
+  text-align: center;
+  padding: 1.875rem;
+  color: white;
+}
+
+button {
+  padding: 0.9375rem 1.5625rem;
+  border-radius: 1.5625rem;
+  border: 0;
+  background-color: #f7a741;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #e2830a;
+}
+
+h1 {
+  font-size: 350%;
+  margin: 0;
+}
+
+p {
+  line-height: 150%;
+}
+
+p,
+a,
+button {
+  font-size: 1rem;
+}
+
+section {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 6.25rem;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: 0.9375rem;
+  font-size: 140%;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button {
+  letter-spacing: 0.0313rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+#screenheight {
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  height: 6.25rem;
+  justify-content: space-between;
+}
+nav .logo {
+  padding: 0.9375rem 0;
+  transition: 200ms ease-in-out;
+  height: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+}
+nav .logo > * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+nav .logo .logotext {
+  margin-right: 0.625rem;
+  font-size: 300%;
+}
+nav .logo .logotext .pink {
+  color: #b64f88;
+  margin-right: 0.3125rem;
+}
+nav .logo .logotext .yellow {
+  color: #f7a741;
+}
+nav .logo .logotext .blue {
+  color: #3ab0b9;
+}
+nav .logo:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+nav .buttons {
+  justify-content: right;
+  overflow: hidden;
+}
+nav .buttons a {
+  display: inline-block;
+  margin-left: 1.875rem;
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+  line-height: 6.25rem;
+}
+nav .buttons a:hover {
+  color: #f7a741;
+}
+nav .buttons button {
+  margin-left: 1.875rem;
+}
+nav .buttons #current {
+  color: #f7a741;
+}
+nav .buttons .menubutton {
+  margin: 0;
+}
+
+#hero {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: grid;
+  gap: 6.25rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 6.25rem - 9.375rem);
+  justify-content: center;
+  align-items: center;
+  padding: 4.6875rem 0;
+}
+#hero h1 {
+  text-align: left;
+  margin-bottom: 1.875rem;
+}
+#hero p {
+  margin: 0.9375rem 0;
+}
+#hero button {
+  margin-top: 1.875rem;
+}
+#hero .images {
+  position: relative;
+  height: 100%;
+}
+#hero .images img {
+  position: absolute;
+  border-radius: 0.625rem;
+}
+#hero .images .first {
+  height: 18.75rem;
+  display: block;
+  top: 0;
+  left: 0;
+  box-shadow: -0.625rem -0.625rem 0 #44bbc4;
+}
+#hero .images .second {
+  width: 15.625rem;
+  display: block;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0.625rem 0.625rem 0 #b64f88;
+}
+
+#why,
+#levels {
+  background-color: #f5f5f5;
+}
+
+#why .card {
+  border: 0.125rem solid #b64f88;
+  background-color: rgba(182, 79, 136, 0.07);
+  color: rgb(42, 42, 42);
+  box-shadow: 0.3125rem 0.3125rem 0 #b64f88;
+}
+
+#skills {
+  padding-right: 0;
+  padding-left: 0;
+}
+#skills .grid {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding-bottom: 1.875rem;
+  padding-left: 6.5625rem;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #44bbc4 #f5f5f5; /* scroll thumb and track */
+}
+#skills .grid::-webkit-scrollbar {
+  width: 0.75rem; /* width of the entire scrollbar */
+}
+#skills .grid::-webkit-scrollbar-track {
+  background: #f5f5f5; /* color of the tracking area */
+}
+#skills .grid::-webkit-scrollbar-thumb {
+  background-color: #44bbc4; /* color of the scroll thumb */
+  border-radius: 1.25rem; /* roundness of the scroll thumb */
+  border: 0.125rem solid #f5f5f5; /* creates padding around scroll thumb */
+}
+#skills .grid .card {
+  min-height: 18.75rem;
+  min-width: 25%;
+  border: 0.125rem solid #f7a741;
+  background-color: rgba(247, 167, 65, 0.1);
+  color: rgb(42, 42, 42);
+  box-shadow: -0.3125rem 0.3125rem 0 #f7a741;
+}
+
+#levels .card {
+  border: 0.125rem solid #44bbc4;
+  background-color: rgba(68, 187, 196, 0.07);
+  color: rgb(42, 42, 42);
+  box-shadow: 0.3125rem 0.3125rem 0 #44bbc4;
+}
+
+#contact form {
+  max-width: 50rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#contact form #columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.875rem;
+}
+#contact form .column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9375rem;
+  padding: 0;
+}
+#contact form .formgroup {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.875rem;
+  align-items: center;
+}
+#contact form .formgroup label {
+  text-align: right;
+}
+#contact form .formgroup .required::after {
+  content: "*";
+  color: #b64f88;
+  margin-left: 0.125rem;
+}
+#contact form .formgroup input,
+#contact form .formgroup select,
+#contact form .formgroup textarea {
+  padding: 0.9375rem;
+  border-radius: 0.9375rem;
+  border: 0.0625rem solid grey;
+}
+#contact form .formgroup input:hover,
+#contact form .formgroup select:hover,
+#contact form .formgroup textarea:hover {
+  border-color: #44bbc4;
+  background-color: #e7f6f7;
+}
+#contact form .formgroup input:focus,
+#contact form .formgroup select:focus,
+#contact form .formgroup textarea:focus {
+  outline-color: #44bbc4;
+  outline-width: 0.125rem;
+  background-color: #e7f6f7;
+}
+#contact form .formgroup select {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#contact form button {
+  margin-top: 1.875rem;
+  width: 12.5rem;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer p,
+footer a {
+  font-size: 0.8rem;
+}
+footer a {
+  color: rgb(42, 42, 42);
+}
+footer #links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9375rem;
+}
+
+.issues {
+  background-color: #fff3e6;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0.0625rem, transparent 0.0625rem), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0.0625rem, transparent 0.0625rem);
+  background-size: 1.25rem 1.25rem;
+  padding: 0 6.25rem 6.25rem 6.25rem;
+}
+.issues::before {
+  content: "";
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 6.25rem;
+  border-left: 0.125rem solid #bc106e;
+}
+.issues::after {
+  content: "";
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 6.25rem;
+  border-right: 0.125rem solid #bc106e;
+}
+.issues p,
+.issues li,
+.issues a,
+.issues td,
+.issues th {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+}
+.issues th {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.issues tr:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+.issues td,
+.issues th {
+  padding: 0.9375rem;
+}
+.issues table,
+.issues td,
+.issues th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.issues a {
+  color: black;
+  margin-top: 0.9375rem;
+  display: inline-block;
+  background-color: rgba(125, 25, 255, 0.5);
+}
+.issues h1,
+.issues h2,
+.issues h3 {
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 0.1875rem;
+}
+.issues h1 {
+  line-height: 110%;
+  margin: 0;
+  margin-top: 1.875rem;
+  background-color: rgba(255, 140, 25, 0.5);
+}
+.issues .margin {
+  margin-bottom: 1.875rem;
+}
+.issues h2 {
+  background-color: rgba(121, 255, 25, 0.5);
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+.issues h3 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  background-color: rgba(125, 25, 255, 0.5);
+}
+.issues ul > li,
+.issues p {
+  margin-bottom: 0.625rem;
+}
+.issues .webgrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1.875rem;
+}
+.issues .webgrid img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

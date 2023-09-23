@@ -1,0 +1,1 @@
+This is a UI re-design exercise for a learning company's website. Their website was originally made with Wix and had a number of UI design inconsistencies, as well as some functional deal-breakers.
