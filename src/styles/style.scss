@@ -40,7 +40,7 @@ $nav-height: 6.25rem;
 }
 
 * {
-  font-family: "Inclusive Sans", sans-serif;
+  font-family: 'Inclusive Sans', sans-serif;
 }
 
 * {
@@ -48,9 +48,9 @@ $nav-height: 6.25rem;
   padding: 0;
 }
 
-body > * {
+/* #app > *:not(section) {
   padding: 0 $xlarge;
-}
+} */
 
 body {
   @include scrollbar;
@@ -95,8 +95,7 @@ button {
 }
 
 section {
-  padding-top: $xlarge;
-  padding-bottom: $xlarge;
+  padding: $xlarge;
 }
 
 h1,
@@ -131,14 +130,15 @@ button {
   grid-template-rows: auto;
 }
 
-#screenheight {
+/* #screenheight {
   min-height: 100vh;
 }
-
+ */
 nav {
   display: flex;
   height: $nav-height;
   justify-content: space-between;
+  padding: 0 $xlarge;
 
   .logo {
     padding: $small 0;
@@ -214,6 +214,7 @@ nav {
 #hero {
   margin-top: auto;
   margin-bottom: auto;
+  padding: $xlarge;
   display: grid;
   gap: $xlarge;
   grid-template-rows: auto;
@@ -221,7 +222,6 @@ nav {
   min-height: calc(100vh - $nav-height - 2 * $larger);
   justify-content: center;
   align-items: center;
-  padding: $larger 0;
 
   h1 {
     text-align: left;
@@ -280,10 +280,11 @@ nav {
 #skills {
   padding-right: 0;
   padding-left: 0;
+  margin-left: 0;
+  margin-right: 0;
 
   .grid {
     display: flex;
-    //flex-wrap: wrap;
     flex-direction: row;
     overflow-x: scroll;
     padding-bottom: $medium;
@@ -339,7 +340,7 @@ nav {
       }
 
       .required::after {
-        content: "*";
+        content: '*';
         color: $pink;
         margin-left: $border;
       }
@@ -408,10 +409,7 @@ footer {
 .issues {
   //lined paper effect
   background-color: #fff3e6;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.1) 0.0625rem,
-      transparent 0.0625rem
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0.0625rem, transparent 0.0625rem),
     linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0.0625rem, transparent 0.0625rem);
   background-size: 1.25rem 1.25rem; //adjust the size to control the spacing between lines
 
@@ -419,7 +417,7 @@ footer {
 
   //left paper margin
   &::before {
-    content: "";
+    content: '';
     position: fixed;
     height: 100%;
     right: 0;
@@ -430,7 +428,7 @@ footer {
 
   //right paper margin
   &::after {
-    content: "";
+    content: '';
     position: fixed;
     height: 100%;
     left: 0;
@@ -444,7 +442,7 @@ footer {
   a,
   td,
   th {
-    font-family: "Indie Flower", cursive;
+    font-family: 'Indie Flower', cursive;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.0625rem;
@@ -480,7 +478,7 @@ footer {
   h1,
   h2,
   h3 {
-    font-family: "Shadows Into Light", cursive;
+    font-family: 'Shadows Into Light', cursive;
     letter-spacing: 0.1875rem;
   }
 
@@ -504,6 +502,8 @@ footer {
   h3 {
     margin-top: $medium;
     margin-bottom: $medium;
+    padding-left: $xlarge;
+    padding-right: $xlarge;
     background-color: rgba(125, 25, 255, 0.5);
   }
 
@@ -520,5 +520,12 @@ footer {
     img {
       width: 100%;
     }
+  }
+
+  .table,
+  ul,
+  .webgrid {
+    margin-left: $xlarge;
+    margin-right: $xlarge;
   }
 }
