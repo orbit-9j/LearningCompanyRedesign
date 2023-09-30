@@ -38,12 +38,12 @@
     <div class="webgrid">
         <div>
             <h2>full width</h2>
-            <img  src="fullpage.png">
+            <img  src="/fullpage.png">
         </div>
         
         <div>
             <h2>narrow</h2>
-            <img  src="narrowfullpage.png">
+            <img  src="/narrowfullpage.png">
         </div>
     </div>
    

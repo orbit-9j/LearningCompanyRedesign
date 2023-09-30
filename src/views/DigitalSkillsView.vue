@@ -10,8 +10,8 @@
                 <a href="#contact"><button>Book Now</button></a>
             </div>
             <div class="images">
-                <img class="first" src="Group 11.jpg">
-                <img class="second" src="Group 10.jpg">
+                <img class="first" src="/Group11.jpg">
+                <img class="second" src="/Group10.jpg">
             </div>
         </section>
 
