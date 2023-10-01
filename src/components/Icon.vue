@@ -15,7 +15,7 @@
     },
     mounted() {
     // Fetch the SVG content when the component is mounted
-    fetch(`/icons/${this.card.img}`)
+    fetch(`icons/${this.card.img}`)
       .then((response) => response.text())
       .then((svgData) => {
         // Remove text elements from the SVG content
