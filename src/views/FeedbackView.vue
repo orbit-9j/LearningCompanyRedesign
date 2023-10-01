@@ -1,4 +1,9 @@
 <template>
+    <!-- additional feedback since writing the page:
+        - original heading for levels section was too long
+        - in the new design, there are 2 types of course cards, one with "course overview" and "course description". i don't see a difference so i choose one 
+        - there wasn't much visual appeal so I added images and icons-->
+        
     <div class="issues">
         <RouterLink to="/digitalskills">&#8594; Back to re-design &#8592;</RouterLink>
     <h1>Feedback for the current Digital Skills page - Learning Company website</h1>
@@ -12,13 +17,13 @@
     <h2>Logical/flow issues</h2>
     <h3>flow</h3>
     <TableComponent :rows="tables[1]"/>
-    <h3>redundancy &amp; irrelevance</h3>
+    <h3>redundancy & irrelevance</h3>
     <TableComponent :rows="tables[2]"/>
     <h3>content consistency</h3>
     <TableComponent :rows="tables[3]"/>
 
     <h2>Aesthetic issues</h2>
-    <h3>consistency &amp; unity</h3>
+    <h3>consistency & unity</h3>
     <TableComponent :rows="tables[4]"/>
     <h3>contrast</h3>
     <TableComponent :rows="tables[5]"/>
@@ -30,8 +35,8 @@
 
     <h2 id="spelling-issues">Spelling issues</h2>
     <ul>
-    <li>the booking link under &quot;Introduction to Cyber Security&quot; has a misspelled subject, the L is missing (&quot;mailto:[email address]?subject=Digita%20Training%20Booking&quot;)</li>
-    <li>the &quot;Introduction to Cyber Security&quot; card misspells &quot;learners&quot; as &quot;learnes&quot;</li>
+    <li>the booking link under \"Introduction to Cyber Security\" has a misspelled subject, the L is missing (\"mailto:[email address]?subject=Digita%20Training%20Booking\")</li>
+    <li>the \"Introduction to Cyber Security\" card misspells \"learners\" as \"learnes\"</li>
     </ul>
 
     <h1>original webpage reference</h1>
@@ -116,7 +121,7 @@ import TableComponent from '../components/Table.vue';
                         ],
                         [
                             [
-                                { id: 111111, content: "The &quot;Digital Communication &amp; Collaboration Fundamentals&quot; and &quot;Implementing Digital Processes &amp; Machine Learning&quot; cards are missing a full stop, all the other cards have it" },
+                                { id: 111111, content: "The \"Digital Communication & Collaboration Fundamentals\" and \"Implementing Digital Processes & Machine Learning\" cards are missing a full stop, all the other cards have it" },
                                 { id: 222222, content: "A minor flow issue that users may stumble at when reading the cards sequentially" },
                                 { id: 333333, content: "Add the missing full stops" }
                             ]
@@ -128,7 +133,7 @@ import TableComponent from '../components/Table.vue';
                                 { id: 333333, content: "Unify the card and section styles to one style, only varying colors to create visual separation between cards of different sections. I noticed that the skills section is highlighted with a pink background, which suggests that it's the most important one. I chose not to use it in my redesign, but I am not against it. I also borrowed the colored shading from the hero images for consistency of card-shaped elements. I varied the direction of the shadow between sections to create variety" }
                             ],
                             [
-                                { id: 444444, content: "Inconsistent button width/padding (the &quot;Book&quot; button under &quot;Why Learn with our Learning Company?&quot; has a set width while the other buttons' width is determined by text width and padding)" },
+                                { id: 444444, content: "Inconsistent button width/padding (the \"Book\" button under \"Why Learn with our Learning Company?\" has a set width while the other buttons' width is determined by text width and padding)" },
                                 { id: 555555, content: "" },
                                 { id: 666666, content: "This button was removed to remove redundancy, so no aesthetic issues were addressed for it" }
                             ],
@@ -138,19 +143,19 @@ import TableComponent from '../components/Table.vue';
                                 { id: 999999, content: "Select a heading style to be applied to all headings" }
                             ],
                             [
-                                { id: 101010, content: "Heading case difference in the &quot;Specially designed to equip learners with the skills to innovate and succeed&quot; section (&quot;Beginner&quot; vs &quot;INTERMEDIATE&quot; &amp; &quot;ADVANCED&quot;)" },
+                                { id: 101010, content: "Heading case difference in the \"Specially designed to equip learners with the skills to innovate and succeed\" section (\"Beginner\" vs \"INTERMEDIATE\" & \"ADVANCED\")" },
                                 { id: 111111, content: "" },
                                 { id: 121212, content: "Fix capitalization of headings" }
                             ],
                             [
-                                { id: 131313, content: "Inconsistent centering/text alignment between cards in different sections. &quot;Our Digital Learning Solutions&quot; aligns paragraphs to left, other cards center them" },
+                                { id: 131313, content: "Inconsistent centering/text alignment between cards in different sections. \"Our Digital Learning Solutions\" aligns paragraphs to left, other cards center them" },
                                 { id: 141414, content: "" },
                                 { id: 151515, content: "Center all card text" }
                             ],
                             [
                                 { id: 161616, content: "Colour scheme is not consistent in use across buttons, section backgrounds, and header backgrounds with seemingly no thought behind it" },
                                 { id: 171717, content: "Colour schemes are designed with meaning in mind. Each color in a company's branding represents its values. Apart from this, colors should have consistent use across elements to reduce confusion. It's common for websites to limit their accents to 1 or 2 colors, unlike this website, which makes it challenging to work with" },
-                                { id: 181818, content: "I reserved yellow for buttons and link hover states, blue for helper elements (scrollbar, text field focus), and pink for the asterisks in the forms. I changed the shadow color of one of the hero images from yellow to blue as yellow is now reserved for buttons. I also thought about using one color per webpage, visually separating the various services the company offers (e.g. &quot;Digital Skills&quot; uses the pink accent color, and &quot;Work Based Learning&quot; uses yellow). Both solutions are good and a matter of personal taste" }
+                                { id: 181818, content: "I reserved yellow for buttons and link hover states, blue for helper elements (scrollbar, text field focus), and pink for the asterisks in the forms. I changed the shadow color of one of the hero images from yellow to blue as yellow is now reserved for buttons. I also thought about using one color per webpage, visually separating the various services the company offers (e.g. \"Digital Skills\" uses the pink accent color, and \"Work Based Learning\" uses yellow). Both solutions are good and a matter of personal taste" }
                             ],
                             [
                                 { id: 191919, content: "When hovering over a button, each button color behaved differently (pink buttons change color to yellow, yellow buttons lose border but otherwise no changes, yellow button becomes blue)" },
@@ -158,12 +163,12 @@ import TableComponent from '../components/Table.vue';
                                 { id: 212121, content: "Instead of setting a new hover color for each colored button, I used darken(color) to make the button's existing color darker on mouseover" }
                             ],
                             [
-                                { id: 222222, content: "Inconsistent size of blank space between sections. &quot;Our Digital Learning Solutions&quot; is closer to the hero section than to the &quot;Why Learn with our Learning Company?&quot; section" },
+                                { id: 222222, content: "Inconsistent size of blank space between sections. \"Our Digital Learning Solutions\" is closer to the hero section than to the \"Why Learn with our Learning Company?\" section" },
                                 { id: 232323, content: "" },
                                 { id: 242424, content: "Set the same top and bottom padding for each section" }
                             ],
                             [
-                                { id: 252525, content: "Varying paragraph font sizes between sections (e.g. &quot;Our Digital Learning Solutions&quot; has a smaller font than the hero element paragraphs)" },
+                                { id: 252525, content: "Varying paragraph font sizes between sections (e.g. \"Our Digital Learning Solutions\" has a smaller font than the hero element paragraphs)" },
                                 { id: 262626, content: "" },
                                 { id: 272727, content: "Use the same font size across all paragraphs" }
                             ]
@@ -177,19 +182,19 @@ import TableComponent from '../components/Table.vue';
                         ],
                         [
                             [
-                                { id: 111111, content: "The &quot;Contact Us&quot; button in the hero section overlaps with paragraph text on some screens" },
+                                { id: 111111, content: "The \"Contact Us\" button in the hero section overlaps with paragraph text on some screens" },
                                 { id: 222222, content: "The user may not be able to read part of the text, which they may find frustrating" },
                                 { id: 333333, content: "Rewrite the CSS to fix the way the button placement behaves, which can be done with a simple margin property and position:relative instead of absolute" }
                             ]
                         ],
                         [
                             [
-                                { id: 111111, content: "The cards under &quot;Specially designed to equip learners with the skills to innovate and succeed&quot; have misaligned paragraphs, skewing the text to the right and creating extra blank space to the side of it" },
+                                { id: 111111, content: "The cards under \"Specially designed to equip learners with the skills to innovate and succeed\" have misaligned paragraphs, skewing the text to the right and creating extra blank space to the side of it" },
                                 { id: 222222, content: "Distracts the reader" },
                                 { id: 333333, content: "Rewrite the CSS to fix the position of the text on narrow screens" }
                             ],
                             [
-                                { id: 444444, content: "There is a very large blank space between the hero &quot;Contact Us&quot; button and the hero paragraph text" },
+                                { id: 444444, content: "There is a very large blank space between the hero \"Contact Us\" button and the hero paragraph text" },
                                 { id: 555555, content: "This may be caused by the way the Wix theme handles image position at different screen sizes" },
                                 { id: 666666, content: "I separated the hero section into 2 columns, with each column being in a self-contained wrapper that will not interfere with each other. On narrower screens, the second wrapper can be moved above the first one, allowing images to be displayed above the text (or removed altogether, with no effect on the rest of the text)" }
                             ],

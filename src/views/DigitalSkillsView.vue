@@ -1,5 +1,3 @@
-
-
 <template>
     <section id="hero">
             <div>
@@ -15,11 +13,11 @@
             </div>
         </section>
 
-    <CardSection :id="'why'" :heading="'Why Learn with our Learning Company?'"  :group="'sec2'" :cards="cardGroups[0]" />
+    <CardSection :id="'why'" :heading="'Why choose our Learning Company?'"   :cards="cardGroups[0]" />
 
-    <CardSection :id="'skills'" :heading="'Our Digital Learning Solutions'" :group="'main'" :cards="cardGroups[1]" />
+    <CardSection :id="'skills'" :heading="'Our Digital Learning Solutions'"  :cards="cardGroups[1]" />
 
-    <CardSection :id="'levels'" :heading="'Specially designed to equip learners with the skills to innovate and succeed'" :group="'sec3'" :cards="cardGroups[2]" />
+    <CardSection :id="'levels'" :heading="'Specially designed to suit your skill level'"  :cards="cardGroups[2]" />
 
     <section id="contact">
         <h1>Book a Digital Skills session</h1>
@@ -42,14 +40,11 @@
                         <label class="required" >Course</label>
                         <select required>
                             <option value="" disabled selected>-Please Select-</option>
-                            <option>Digital Communication & Collaboration Fundamentals</option>
-                            <option>Creating Engaging Digital Content</option>
+                            <option>Artificial Intelligence in Business</option>
                             <option>Digital Marketing & Social Media</option>
-                            <option>Introduction to Cyber Security</option>
-                            <option>Understanding Data Analysis & Protection</option>
-                            <option>Implementing Digital Processes & Machine Learning</option>
-                            <option>Project Management & Ownership</option>
-                            <option>Microsoft Office Applications</option>                
+                            <option>Enhanced Working with Digital Tools</option>
+                            <option>Exploiting Data: Tools for Data Analysis</option>
+                            <option>UX Design & Digital Content Creation</option>             
                         </select>
                     </div>
                     <div class="formgroup">
@@ -106,70 +101,77 @@
                         {
                             id:1,
                             heading: "Tailored Support",
-                            body: "Our Training Needs Analysis allows employers and staff members to share current circumstances as well as digital capabilities and goals. This allows us to personalise workshops to align with development needs and priorities within organisations"
+                            body: "Our Training Needs Analysis allows employers and staff members to share current circumstances as well as digital capabilities and goals. This allows us to personalise workshops to align with development needs and priorities within organisations. ",
+                            img:"tailor.svg"
                         },
                         {
                             id: 2,
                             heading:"Digital Innovation",
-                            body: "The Digital Skills Training Series focuses on developing digital skills, knowledge and confidence among participants. These sessions raises awareness of innovative uses of digital tools across organisations."
+                            body: "The Digital Skills Training Series focuses on developing digital skills, knowledge and confidence among participants. These sessions raises awareness of innovative uses of digital tools across organisations and helps to equip you and your team with the skills to adapt and thrive in the digital future.",
+                            img:"light.svg"
                         },
                         {
                             id: 3,
                             heading:"Expert Guidance",
-                            body:"Sessions are delivered bilingually by our dedicated team of digital experts. This includes participations from expert guest speakers who provide invaluable, up to date guidance from the cutting edge of digital and emerging technology."
+                            body:"Sessions are delivered bilingually by our dedicated team of digital experts. This includes participations from expert guest speakers who provide invaluable, up to date guidance from the cutting edge of digital and emerging technology.",
+                            img:"expert.svg"
                         },
                     
                     ], [
                     {
                         id: 4,
-                        heading: "Creating Engaging Digital Content",
-                        body: "This session focuses on developing in-demand skills within the digital media industries, focusing on three key areas: User Experience (UX) Design, Graphic Design and Web Development."
+                        heading: "Artificial Intelligence in Business",
+                        body: "The AI revolution is reshaping the business world, offering limitless possibilities for growth, efficiency, and innovation. This course will equip participants with a grasp of AI, its tangible applications, and the ethical decisions surrounding its implementation. Through focused activities, participants will delve into the intricacies of AI and discover how to harness its capabilities to propel business excellence.",
+                        objectives:["Gain a solid foundation in artificial intelligence, including its principles, concepts, and core technologies.","Learn how to leverage AI tools for practical business solutions."],
+                        img:"ai.jpg"
+
                     },
                     {
                         id: 5,
                         heading: "Digital Marketing & Social Media",
-                        body: "Learners who complete this session will have a solid understanding of social media technologies and digital marketing best practices and will be equipped with the skills they need to develop and execute effective digital marketing campaigns."
+                        body: "Unlock the potential of social media platforms as powerful marketing tools in this informative. Participants will gain insights into the pivotal role of digital marketing in the contemporary landscape and the specific impact of social media. Learn to craft engaging content, engage your organisation’s community with targeted marketing campaigns, and employ analytics to measure campaign success, enabling data-driven decisions.",
+                        objectives: ["Grasp effective audience engagement strategies.", "Design goal-oriented marketing strategies that align with organisational objectives.", "Utilise analytics for measuring marketing campaign effectiveness."],
+                        img:"sm.jpg"
                     },
                     {
                         id: 6,
-                        heading: "Introduction to Cyber Security",
-                        body: "This session will give learners a solid foundation in cyber security principles and best practices, enabling them to take an active role in protecting their personal and professional assets against cyber threats. It is ideal for individuals who are new to the field of cyber security and for those seeking to improve their understanding."
+                        heading: "Enhanced Working with Digital Tools",
+                        body: "This course looks at working with digital technologies to enhance digital communication and collaboration. Explore how digital tools can elevate your work and help you better manage projects while honing the skills needed for seamless teamwork in virtual environments. Master various digital technologies, including Microsoft Teams, Miro, Slack, and more, to streamline tasks, elevate project management practices, and enhance workplace communication and collaboration.",
+                        objectives:["Master the use of digital technologies, such as Microsoft Teams, Miro, Planner, Microsoft Visio, Slack, Padlet, PollEverywhere, and more, to streamline tasks and improve project management.","Understand the advantages of digital communication and collaboration and avoiding technical issues."],
+                        img:"tools.jpg"
                     },
                     {
                         id: 7,
-                        heading: "Understanding Data Analysis & Protection",
-                        body: "The training course focuses on the digital data landscape and is designed for learners seeking to gain expertise in data protection and data analysis. The course covers the fundamentals of data privacy and security, including an overview of relevant regulations. It also introduces learners to the basics of data analysis and data visualization."
+                        heading: "Exploiting Data: Tools for Data Analysis",
+                        body: "Discover the power of data in this insightful course, where we explore how to collect, analyse, and leverage data for informed decision making. Participants will learn essential data protection practices, including encryption and access control. Dive into the use of data collection tools like Microsoft Forms and data analysis tools like Microsoft Excel. Gain proficiency in safeguarding data and unlocking its potential to drive strategic decisions.",
+                        objectives:["Apply best practices for safeguarding sensitive information, including data encryption and access control.", "Master the effective use of tools like spreadsheets, databases, and data visualisation software for data management and analysis.", "Utilise data insights to make informed decisions."],
+                        img:"analysis.jpg"
                     },
                     {
                         id: 8,
-                        heading: "Implementing Digital Processes & Machine Learning",
-                        body: "This session helps learners to understand and implement digital transformation processes and introduces learners to the basics of artificial intelligence and machine learning,. It also introduces advanced technologies, including Machine Learning and provide an overview of cloud computing and virtualisation and their impact on modern business."
+                        heading: "UX Design & Digital Content Creation",
+                        body: "In today's digital age, crafting user-centric experiences is the linchpin of successful products and services. Our course is your gateway to a deep dive into the art of design and user experience (UX). Focused on understanding user needs, motivations, and behaviours, this program blends theory, real-world examples, and hands-on activities to empower participants with the skills to create visually captivating and user-friendly digital graphics that deliver exceptional user experiences.",
+                        objectives:["Develop a strong foundation in design and user experience (UX) principles.","Gain insights into understanding user needs, motivations, and behaviours.", "Craft and create visually engaging and user-friendly digital graphics."],
+                        img:"ui.jpg"
                     },
-                    {
-                        id: 9,
-                        heading: "Project Management & Ownership",
-                        body: "This session provides a comprehensive overview of the project management lifecycle, from project initiation and planning to execution and closing. We will focus on methodologies and tools that can be utilised to ensure smooth management and ownership of future projects."
-                    },
-                    {
-                        id: 10,
-                        heading: "Microsoft Office Applications",
-                        body: "The Microsoft Office training courses include programs such as Excel, PowerBI, Outlook, Teams and more. These courses are available as online or in-person training sessions and can be delivered at the beginner, intermediate or advanced levels, depending on the needs of the individual."
-                    }
                 ],[
                     {
                         id: 11,
                         heading: "Beginner",
-                        body: "A recommended starting point. Ideal for individuals building confidence in using digital in the workplace."
+                        body: "A recommended starting point. Ideal for individuals building confidence in using digital in the workplace.",
+                        img:"abc.svg"
                     },
                     {
                         id: 12,
                         heading: "Intermediate",
-                        body: "This could be a role-based certification to begin learning valuable on the job skills or building up skills gained in the fundamentals courses."
+                        body: "This could be a role-based certification to begin learning valuable on the job skills or building up skills gained in the fundamentals courses.",
+                        img:"gears.svg"
                     },
                     {
                         id: 13,
                         heading: "Advanced",
-                        body: "These can be Certified and/or technical certifications and can support those on the job experts looking to keep up to date with their core skills."
+                        body: "These can be Certified and/or technical certifications and can support those on the job experts looking to keep up to date with their core skills.",
+                        img:"cap.svg"
                     }
                 ]]
             }

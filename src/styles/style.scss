@@ -1,11 +1,14 @@
 $blue: #44bbc4;
 $paleblue: rgba(68, 187, 196, 0.07);
 $pink: #b64f88;
-$palepink: rgba(182, 79, 136, 0.07);
+//$palepink: rgba(182, 79, 136, 0.07);
+$palepink: #fbf2f7;
 $yellow: #f7a741;
-$paleyellow: rgba(247, 167, 65, 0.1);
+//$paleyellow: rgba(247, 167, 65, 0.1);
+$paleyellow: #fff6ed;
 $grey: #f5f5f5;
-$bodytext: rgb(42, 42, 42);
+$darkest: rgb(42, 42, 42); //original
+//$darkest: rgb(47, 47, 47);
 
 $border: 0.125rem;
 $bby: 0.3125rem;
@@ -48,22 +51,29 @@ $nav-height: 6.25rem;
   padding: 0;
 }
 
-/* #app > *:not(section) {
-  padding: 0 $xlarge;
-} */
-
 body {
   @include scrollbar;
 
-  color: $bodytext;
+  color: $darkest;
 }
 
 .card {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: $xsmall;
   text-align: center;
-  padding: $medium;
-  color: white;
+  padding: $large;
+  margin-bottom: $xsmall; //account for the shadow for the distance from the bottom of the card
+
+  h4 {
+    margin: $small 0;
+  }
+
+  .icon {
+    max-width: 100px;
+    max-height: 100px;
+    margin: auto;
+    margin-bottom: $medium;
+  }
 }
 
 button {
@@ -84,8 +94,10 @@ h1 {
   margin: 0;
 }
 
-p {
+p,
+li {
   line-height: 150%;
+  font-weight: 500;
 }
 
 p,
@@ -105,13 +117,13 @@ h2 {
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 250%;
 }
 
 h3 {
   margin: 0;
-  margin-bottom: $small;
-  font-size: 140%;
+  margin-bottom: $medium;
+  font-size: 160%;
 }
 
 h1,
@@ -119,21 +131,18 @@ h2,
 h3,
 p,
 a,
-button {
+button,
+li {
   letter-spacing: 0.0313rem;
 }
 
 .grid {
   display: grid;
-  gap: $medium;
+  gap: $large;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
 
-/* #screenheight {
-  min-height: 100vh;
-}
- */
 nav {
   display: flex;
   height: $nav-height;
@@ -189,7 +198,7 @@ nav {
       display: inline-block;
       margin-left: $medium;
       text-decoration: none;
-      color: $bodytext;
+      color: $darkest;
       line-height: $nav-height;
     }
 
@@ -246,7 +255,7 @@ nav {
     }
 
     .first {
-      height: 18.75rem;
+      width: 49%;
       display: block;
       top: 0;
       left: 0;
@@ -254,7 +263,7 @@ nav {
     }
 
     .second {
-      width: 15.625rem;
+      width: 49%;
       display: block;
       bottom: 0;
       right: 0;
@@ -263,51 +272,134 @@ nav {
   }
 }
 
-#why,
-#levels {
-  background-color: $grey;
-}
-
 #why {
   .card {
-    border: $border solid $pink;
     background-color: $palepink;
-    color: $bodytext;
-    box-shadow: $bby $bby 0 $pink;
+    box-shadow: $xsmall $xsmall 0 $pink;
+    z-index: 2;
   }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    /* text-shadow:
+      1px -1px 0 $pink,
+      1px 1px 0 $pink,
+      -1px -1px 0 $pink,
+      -1px 1px 0 $pink; */
+
+    /* text-shadow:
+      1px -1px 0 black,
+      1px 1px 0 black,
+      -1px -1px 0 black,
+      -1px 1px 0 black; */
+
+    /* text-shadow:
+      1px -1px 0 black,
+      1px 1px 0 black,
+      -1px -1px 0 black,
+      -1px 1px 0 black; */
+
+    /* text-shadow:
+      1px -1px $bby black,
+      1px 1px $bby black,
+      -1px -1px $bby black,
+      -1px 1px $bby black; */
+
+    /* text-shadow:
+    1px -1px 0 $darkest,
+    1px 1px 0 $darkest,
+    -1px -1px 0 $darkest,
+    -1px 1px 0 $darkest; */
+
+    //-webkit-text-stroke: 0.5px $darkest; //doesn't work because it fills inwards
+  }
+
+  //background image would be good but i can't figure out a way to make the heading readable
+
+  /* background-image: url(/public/bgs/desk.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative; */
+
+  /* &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      rgba(red($darkest), green($darkest), blue($darkest), 0.95) 15%,
+      rgba(red($darkest), green($darkest), blue($darkest), 0.4) 85%,
+      rgba(red($darkest), green($darkest), blue($darkest), 0.95) 100%
+    );
+
+    z-index: 1;
+  } */
 }
 
 #skills {
+  background-color: $darkest;
   padding-right: 0;
   padding-left: 0;
   margin-left: 0;
   margin-right: 0;
 
+  h2 {
+    color: white;
+  }
+
   .grid {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding-bottom: $medium;
+    padding-right: $xsmall;
     padding-left: calc($xlarge + $bby);
-    @include scrollbar;
+    //@include scrollbar; //scrollbar doesn't look good
+
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+    /* For Webkit browsers (such as Chrome/Safari) */
+    &::-webkit-scrollbar {
+      width: 0; /* Adjust the width of the scrollbar */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent; /* Set the scrollbar thumb color to transparent */
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent; /* Set the scrollbar track color to transparent */
+    }
 
     .card {
-      min-height: 18.75rem;
-      min-width: 25%;
-      border: $border solid $yellow;
+      min-width: 70%;
       background-color: $paleyellow;
-      color: $bodytext;
-      box-shadow: (-$bby) $bby 0 $yellow;
+      box-shadow: (-$xsmall) $xsmall 0 $yellow;
+      text-align: left;
+      overflow: hidden;
+
+      .skillsgrid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: calc($large * 2);
+        height: 100%;
+
+        img {
+          width: calc(100% + $large * 2);
+          height: calc(100% + $large * 2);
+          object-fit: cover;
+          margin: -$large;
+        }
+      }
     }
   }
 }
 
 #levels {
   .card {
-    border: $border solid $blue;
     background-color: $paleblue;
-    color: $bodytext;
-    box-shadow: $bby $bby 0 $blue;
+    box-shadow: $xsmall $xsmall 0 $blue;
   }
 }
 
@@ -393,7 +485,7 @@ footer {
   }
 
   a {
-    color: $bodytext;
+    color: $darkest;
   }
 
   #links {
@@ -441,7 +533,8 @@ footer {
   li,
   a,
   td,
-  th {
+  th,
+  h4 {
     font-family: 'Indie Flower', cursive;
     font-size: 1.1rem;
     font-weight: 600;

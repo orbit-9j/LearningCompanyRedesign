@@ -2,7 +2,7 @@
     <section :id="id">
         <h2>{{ heading }}</h2>
         <div class="grid">
-            <CardComponent :cards="cards" :group="sec2"/>
+            <CardComponent :cards="cards" :type="id"/>
         </div>
     </section>
 </template>
@@ -12,7 +12,7 @@
 
     export default{
        name: "CardSectionComponent",
-       props :{id: String, heading: String, cards:Array, group: String},
+       props :{id: String, heading: String, cards:Array},
        components:{CardComponent},
     }
 </script>

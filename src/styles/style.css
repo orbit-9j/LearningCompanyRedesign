@@ -7,9 +7,6 @@
   padding: 0;
 }
 
-/* #app > *:not(section) {
-  padding: 0 $xlarge;
-} */
 body {
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: #44bbc4 #f5f5f5; /* scroll thumb and track */
@@ -31,8 +28,17 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 0.625rem;
   text-align: center;
-  padding: 1.875rem;
-  color: white;
+  padding: 3.125rem;
+  margin-bottom: 0.625rem;
+}
+.card h4 {
+  margin: 0.9375rem 0;
+}
+.card .icon {
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+  margin-bottom: 1.875rem;
 }
 
 button {
@@ -52,8 +58,10 @@ h1 {
   margin: 0;
 }
 
-p {
+p,
+li {
   line-height: 150%;
+  font-weight: 500;
 }
 
 p,
@@ -73,13 +81,13 @@ h2 {
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 250%;
 }
 
 h3 {
   margin: 0;
-  margin-bottom: 0.9375rem;
-  font-size: 140%;
+  margin-bottom: 1.875rem;
+  font-size: 160%;
 }
 
 h1,
@@ -87,21 +95,18 @@ h2,
 h3,
 p,
 a,
-button {
+button,
+li {
   letter-spacing: 0.0313rem;
 }
 
 .grid {
   display: grid;
-  gap: 1.875rem;
+  gap: 3.125rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
 
-/* #screenheight {
-  min-height: 100vh;
-}
- */
 nav {
   display: flex;
   height: 6.25rem;
@@ -195,72 +200,130 @@ nav .buttons .menubutton {
   border-radius: 0.625rem;
 }
 #hero .images .first {
-  height: 18.75rem;
+  width: 49%;
   display: block;
   top: 0;
   left: 0;
   box-shadow: -0.625rem -0.625rem 0 #44bbc4;
 }
 #hero .images .second {
-  width: 15.625rem;
+  width: 49%;
   display: block;
   bottom: 0;
   right: 0;
   box-shadow: 0.625rem 0.625rem 0 #b64f88;
 }
 
-#why,
-#levels {
-  background-color: #f5f5f5;
-}
+#why {
+  /* background-image: url(/public/bgs/desk.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative; */
+  /* &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      rgba(red($darkest), green($darkest), blue($darkest), 0.95) 15%,
+      rgba(red($darkest), green($darkest), blue($darkest), 0.4) 85%,
+      rgba(red($darkest), green($darkest), blue($darkest), 0.95) 100%
+    );
 
+    z-index: 1;
+  } */
+}
 #why .card {
-  border: 0.125rem solid #b64f88;
-  background-color: rgba(182, 79, 136, 0.07);
-  color: rgb(42, 42, 42);
-  box-shadow: 0.3125rem 0.3125rem 0 #b64f88;
+  background-color: #fbf2f7;
+  box-shadow: 0.625rem 0.625rem 0 #b64f88;
+  z-index: 2;
+}
+#why h2 {
+  position: relative;
+  z-index: 2;
+  /* text-shadow:
+    1px -1px 0 $pink,
+    1px 1px 0 $pink,
+    -1px -1px 0 $pink,
+    -1px 1px 0 $pink; */
+  /* text-shadow:
+    1px -1px 0 black,
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    -1px 1px 0 black; */
+  /* text-shadow:
+    1px -1px 0 black,
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    -1px 1px 0 black; */
+  /* text-shadow:
+    1px -1px $bby black,
+    1px 1px $bby black,
+    -1px -1px $bby black,
+    -1px 1px $bby black; */
+  /* text-shadow:
+  1px -1px 0 $darkest,
+  1px 1px 0 $darkest,
+  -1px -1px 0 $darkest,
+  -1px 1px 0 $darkest; */
 }
 
 #skills {
+  background-color: rgb(42, 42, 42);
   padding-right: 0;
   padding-left: 0;
   margin-left: 0;
   margin-right: 0;
 }
+#skills h2 {
+  color: white;
+}
 #skills .grid {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
-  padding-bottom: 1.875rem;
+  padding-right: 0.625rem;
   padding-left: 6.5625rem;
-  scrollbar-width: thin; /* "auto" or "thin" */
-  scrollbar-color: #44bbc4 #f5f5f5; /* scroll thumb and track */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+  /* For Webkit browsers (such as Chrome/Safari) */
 }
 #skills .grid::-webkit-scrollbar {
-  width: 0.75rem; /* width of the entire scrollbar */
-}
-#skills .grid::-webkit-scrollbar-track {
-  background: #f5f5f5; /* color of the tracking area */
+  width: 0; /* Adjust the width of the scrollbar */
 }
 #skills .grid::-webkit-scrollbar-thumb {
-  background-color: #44bbc4; /* color of the scroll thumb */
-  border-radius: 1.25rem; /* roundness of the scroll thumb */
-  border: 0.125rem solid #f5f5f5; /* creates padding around scroll thumb */
+  background-color: transparent; /* Set the scrollbar thumb color to transparent */
+}
+#skills .grid::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the scrollbar track color to transparent */
 }
 #skills .grid .card {
-  min-height: 18.75rem;
-  min-width: 25%;
-  border: 0.125rem solid #f7a741;
-  background-color: rgba(247, 167, 65, 0.1);
-  color: rgb(42, 42, 42);
-  box-shadow: -0.3125rem 0.3125rem 0 #f7a741;
+  min-width: 70%;
+  background-color: #fff6ed;
+  box-shadow: -0.625rem 0.625rem 0 #f7a741;
+  text-align: left;
+  overflow: hidden;
+}
+#skills .grid .card .skillsgrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 6.25rem;
+  height: 100%;
+}
+#skills .grid .card .skillsgrid img {
+  width: calc(100% + 6.25rem);
+  height: calc(100% + 6.25rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: -3.125rem;
 }
 
 #levels .card {
-  border: 0.125rem solid #44bbc4;
   background-color: rgba(68, 187, 196, 0.07);
-  color: rgb(42, 42, 42);
-  box-shadow: 0.3125rem 0.3125rem 0 #44bbc4;
+  box-shadow: 0.625rem 0.625rem 0 #44bbc4;
 }
 
 #contact form {
@@ -373,7 +436,8 @@ footer #links {
 .issues li,
 .issues a,
 .issues td,
-.issues th {
+.issues th,
+.issues h4 {
   font-family: "Indie Flower", cursive;
   font-size: 1.1rem;
   font-weight: 600;
