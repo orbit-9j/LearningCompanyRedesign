@@ -13,7 +13,7 @@
                         {{ item }}</li>
                 </ul>
             </div>
-            <img v-if="type === 'skills'" :src="`/public/bgs/${card.img}`">
+            <img v-if="type === 'skills'" :src="`/bgs/${card.img}`">
         </div>
         
     </div>
